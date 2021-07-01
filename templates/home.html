@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine Learning App for Recommendation Engine
+		</div>
+		<h2> Gift Recommendation for customers</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your data </p>
+		<p>1. I enjoy things related to the ocean (sand, salt water, boating, etc).</p>
+
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="open_wearing_0" rows="1" cols="50"></textarea>
+		<p>2. I enjoy things related to lakes (fresh water, boating, canoes, etc.)</p>
+		<textarea name="open_wearing_1" rows="1" cols="50"></textarea>
+		<p>3. I enjoy going out to bars and partying on the weekends</p>
+		<textarea name="open_wearing_2" rows="1" cols="50"></textarea>
+		<p>4. I enjoy lounging around at home with my comfiest clothing on</p>
+		<textarea name="open_wearing_3" rows="1" cols="50"></textarea>
+		<p>5. It is important for us to take care of our planet</p>
+		<textarea name="open_wearing_4" rows="1" cols="50"></textarea>
+		<p>6. I value brands that care about environmental sustainability</p>
+		<textarea name="open_wearing_5" rows="1" cols="50"></textarea>
+		<p>AGE</p>
+		<textarea name="age" rows="1" cols="50"></textarea>
+		<p>Living Area</p>
+		<textarea name="living" rows="1" cols="50"></textarea>
+		<p>Gender</p>
+		<textarea name="gender" rows="1" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
